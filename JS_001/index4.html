@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>JS_004</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div class="container">
+        <p id="msg">Set font size and family</p>
+
+        <!-- Size 入力フォーム -->
+        <label for="f1">Size</label>    
+        <input type="range" id="f1" min="10" max="100" >
+        <!-- Font-family 入力フォーム -->
+        <label for="f2">Font Family</label>
+        <select id="f2" class="form-control">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+        <!-- クリックしたらイベント発生 -->
+        <button onclick="action(event)" class="btn btn-primary">Click!</button>
+
+        <script>
+            // ボタンがクリックされたときの処理
+            function action(e){
+                // フォームの値を取得
+                let f1=document.querySelector("#f1");
+                let f2=document.querySelector("#f2");
+                let msg=document.querySelector("#msg");
+
+                msg.style.fontFamily=f2.value;
+                msg.style.fontSize=f1.value+"px";
+                let result = `Font size set to ${f1.value}px, Font family set to ${f2.value}`;
+                // HTMLとして表示
+                msg.innerHTML=result;
+            }
+        </script>
+</body>
+</html>

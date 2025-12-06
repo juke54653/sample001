@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>JS_005</title>
+    <style>
+    @import url(Style5.css);
+</style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div class="container">
+        <p id="msg" class="h3 p-2">RGBを設定：</p>
+
+        <label for="R" style="color:red">Red</label>    
+        <input type="range" id="R" min="0" max="255" class="form-control-range" oninput="action()">
+        <label for="G"style="color:Green">Green</label>    
+        <input type="range" id="G" min="0" max="255" class="form-control-range" oninput="action()">
+        <label for="B" style="color:blue">Blue</label>
+        <input type="range" id="B" min="0" max="255" class="form-control-range" oninput="action()">
+        
+        <script>
+            // 値が入力されたときの処理
+            function action(){
+                // フォームの値を取得
+                let R=document.querySelector("#R").value;
+                let G=document.querySelector("#G").value;
+                let B=document.querySelector("#B").value;
+                let msg=document.querySelector("#msg");
+                
+                let color=R+","+G+","+B;
+                msg.style.backgroundColor='rgb('+color+')';
+
+                let val=parseInt(R)+parseInt(G)+parseInt(B);
+                if(val>370){
+                    msg.style.color='black';
+                } else {
+                    msg.style.color='white';
+                }
+                msg.textContent='['+color+']';
+                }
+        </script>
+</body>
+</html>

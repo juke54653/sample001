@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>JS_003</title>
+<!--    <script src="script.js" defer></script>-->
+    <style>
+    @import url(Style3.css);
+</style>
+</head> 
+
+<body>
+    <h1>Hello World!</h1>
+    <div class="container">
+        <p id="msg">Enter your name</p>
+        <!-- 名前入力フォーム -->
+        <label for="f1">Name</label>    
+        <input type="text" id="f1">
+        <!-- パスワード入力フォーム -->
+        <label for="f2">password</label>
+        <input type="password" id="f2">
+        <!-- クリックしたらイベント発生 -->
+        <button onclick="action(event)">Click!</button>
+
+        <script>
+            // ボタンがクリックされたときの処理
+            function action(e){
+                // フォームの値を取得
+                let f1=document.querySelector("#f1");
+                let f2=document.querySelector("#f2");
+                // 結果を表示
+                let result = "Your name is "+f1.value+"<br>"+"Your password is "+f2.value.length+"chars long.";
+                // 結果を画面に表示
+                let msg=document.querySelector("#msg");
+                // HTMLとして表示
+                msg.innerHTML=result;
+                msg.te
+            }
+        </script>
+    </div>
+</body>
+</html>

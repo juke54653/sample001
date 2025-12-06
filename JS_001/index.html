@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>JS_001</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div class="container">
+        <p>
+            <script>
+                let array = [10, 20, 30, 40, 50];
+                let total = 0;
+                for (let item of array) {
+                    total += item;
+                }
+                let average = total / array.length;
+                document.write("The sum is " +total+ ", The average is " +average+".<br>");
+            </script>
+
+            <script>
+                let array2={'国語':98,'数学':95,'英語':93,'理科':97,'社会':99};
+                let total2=0;
+                for(let key in array2){
+                    total2+=array2[key];
+                    document.write(key+"は"+array2[key]+"点<br>");
+                }
+                documnt.write("合計点は"+total2+"点です。");
+            </script>
+
+            <script>   
+                let keisan={};
+                keisan.calc=function(){
+                    let total=0;
+                    for(let i in this.data){
+                        total+=this.data[i];
+                    }
+                    return total;
+                }
+                keisan.report=function(){
+                    document.write("Data: "+this.data+"<br>");
+                    document.write("Total: "+this.calc()+"<br>");
+                }
+
+                keisan.data=[5,10,15,20,25];
+                keisan.report();
+                
+            </script>
+        </p>
+    </div>
+    
+</html>

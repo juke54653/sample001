@@ -1,0 +1,23 @@
+<html> 
+<head>
+    <title>JS_002</title>
+<!--    <script src="script.js" defer></script>-->
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div class="container">
+        <p id="msg">Wait...</p>
+        <p onclick="action(event)">Click me!</p>
+        <script>
+            const p=document.querySelector("#msg");
+            p.textContent="Hello from JS!";
+
+            let counter=0;
+            function action(e){
+                counter++;
+                let dom=e.target;
+                dom.textContent=`Clicked ${counter} times`;
+            }
+        </script>
+    </div>
+</html>

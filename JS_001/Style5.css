@@ -1,0 +1,13 @@
+label{
+    font-size: 0.75em;
+    font-weight: bold;
+    margin : 10px 10px 0px 0px;
+    display:block;
+    width:300px;
+}
+input{
+    padding: 5px;
+    margin: 2px 0px;
+    font-size: 1.0em;
+    display: block;
+}
